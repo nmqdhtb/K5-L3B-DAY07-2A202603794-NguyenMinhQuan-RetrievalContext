@@ -1,0 +1,43 @@
+{
+  "selection_split": "dev",
+  "dev_run": "starter/results/step4/dev-20261116-115126",
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "corpus_sha256": "b82d733575816c568ffc7994c012d66fa13137a41effe4bc2386fe0513316295",
+  "dev_cases_sha256": "58e955e850a3e348b0cb7f3bb06575ab8cf953a769347ffe86b2bf2fecfd64d0",
+  "embedding": {
+    "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "pooling": "recursive whitespace segments within token limit; token-count-weighted mean of L2-normalized segment vectors, then L2 normalize",
+    "query_document_processing": "identical; no prefix",
+    "max_sequence_tokens": 128,
+    "dimensions": 384,
+    "index_strategy": "C"
+  },
+  "parameters": {
+    "top_k": 3,
+    "candidate_k": 20,
+    "rrf_k": 60,
+    "max_searches": 4
+  },
+  "baseline": {
+    "name": "tfidf",
+    "strategy": "tfidf",
+    "context_budget_chars": 800,
+    "search_guidance": ""
+  },
+  "selected": {
+    "name": "hybrid_budget",
+    "strategy": "hybrid",
+    "context_budget_chars": 1600,
+    "search_guidance": ""
+  },
+  "dev_artifacts_sha256": {
+    "dense.jsonl": "4d188ecdcbb99101f47d5d1c5f1ee097e57a5b3c4cf37ff09961c4ade7f19e67",
+    "hybrid.jsonl": "d5696db72a1113d0c2c48139ca6cfd0be614d72e347687157ac02b7209d636ee",
+    "hybrid_budget.jsonl": "6d39667b007fdf848cf4758d439086d75746cb8aeb9d1f0809ce02a4b539ddc5",
+    "hybrid_stop.jsonl": "9c6c52529ee733b85820085565d170f8ddf7a6f3ecbdaf3c31a8a35ceed8cec8",
+    "summary.json": "75cd218be1ca44f1efe77924c6138da0ba17d9139ec3b7204180baa81b9b3142",
+    "tfidf.jsonl": "78e6cacbc89297ab727126c962313b95ecc38261567eef0c7ff50e82e172965d"
+  }
+}

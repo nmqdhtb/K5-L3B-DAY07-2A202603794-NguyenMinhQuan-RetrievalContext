@@ -36,7 +36,7 @@ TOOLS = [
 
 
 class ChatController:
-    def __init__(self, model, api_key, *, provider):
+    def __init__(self, model, api_key, *, provider, search_guidance=''):
         self.provider = provider
         self.endpoint = {
             'openrouter': 'https://openrouter.ai/api/v1/chat/completions',
@@ -47,11 +47,12 @@ class ChatController:
             raise ValueError(f'Cần cấu hình {prefix}_MODEL và {prefix}_API_KEY')
         self.model = model
         self.api_key = api_key
+        self.system = SYSTEM + ('\n' + search_guidance if search_guidance else '')
         self.last_search = None
         self.calls = []
 
     def decide(self, question, history):
-        messages = [{'role': 'system', 'content': SYSTEM}, {'role': 'user', 'content': question}]
+        messages = [{'role': 'system', 'content': self.system}, {'role': 'user', 'content': question}]
         if history:
             messages.extend([
                 self.last_search,
