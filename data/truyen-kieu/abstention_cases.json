@@ -1,0 +1,34 @@
+[
+  {
+    "id": "d16",
+    "split": "dev",
+    "question": "Tên riêng của từng khúc trong mười khúc ngâm Kiều viết trong giấc mộng là gì?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Đọc đoạn kể giấc mộng ở trang 11–12. Trang 12 nêu số lượng và nhắc tập Đoạn Trường, nhưng không liệt kê tên từng khúc. Tìm trên cả corpus các cụm “mười khúc ngâm”, “mười bài mới”, “tựa thơ”, “nhan đề”, “đề mục”, “đề thơ” và “tập đoạn trường”. Các chỗ trùng đều ở trang 12 và không có danh sách tên."
+  },
+  {
+    "id": "d17",
+    "split": "dev",
+    "question": "Ai là người thiết kế và xây lầu Ngưng Bích trong Truyện Kiều?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Đọc đoạn Tú Bà nói về việc khóa buồng và cảnh lầu ở trang 59–61. Tìm trên cả corpus “ngưng bích”, “dựng lầu”, “xây lầu”, “thợ xây” và “kiến trúc”. Kết quả duy nhất là tên lầu ở trang 60, không có tên người xây hoặc thiết kế."
+  },
+  {
+    "id": "t06",
+    "split": "test",
+    "question": "Truyện Kiều ghi ngày, tháng và năm sinh của Từ Hải là khi nào?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Đọc phần giới thiệu Từ Hải ở trang 126–127 và đoạn Thúc Sinh kể lại ở trang 170. Văn bản ghi tên và quê quán, không nêu ngày sinh. Tìm trên cả corpus “từ hải”, “hải họ từ”, “họ từ tên hải”, “ngày sinh”, “sinh nhật”, “ngày đẻ” và “năm sinh”. Dòng chứa “sinh nhật” ở trang 22 nói về ngoại gia trong phần Kim–Kiều, không phải Từ Hải."
+  },
+  {
+    "id": "t07",
+    "split": "test",
+    "question": "Tên riêng của viên thổ quan được gả Kiều và chạy theo vớt nàng là gì?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Tìm trên cả corpus “thổ quan”, “quan thổ”, “thổ tù” và “vớt vội vàng”. Đọc cảnh Hồ công ép gả ở trang 151–152, cảnh vớt ở trang 153–154 và đoạn thuật lại ở trang 172. Các chi tiết này chỉ gọi người đó theo chức danh. Hồ công là người ra lệnh ép gả."
+  }
+]

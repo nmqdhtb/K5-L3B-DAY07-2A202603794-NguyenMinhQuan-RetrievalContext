@@ -23,6 +23,18 @@ python3 starter/convert_day6.py \
 
 SHA-256 đầu vào là `8d2d23c8adba2aba92af2c7e38e3b468e84f2c9fad09d9b6cf264accfcc4ddf3`, trùng với bản Day 6 đã chốt.
 
+### Benchmark Day 7
+
+| Tập | Có đáp án | Thiếu bằng chứng | Tổng |
+|---|---:|---:|---:|
+| Dev | 15 | 2 | 17 |
+| Test | 5 | 2 | 7 |
+
+- [questions.json](truyen-kieu/questions.json) chứa các câu có đáp án, dùng trực tiếp với `starter/baseline.py` và `--split dev` khi thử cấu hình. Mỗi đoạn trích chuẩn nằm trọn trong một chunk đúng nguồn và trang PDF. Khi chấm agent, các câu trong file này có `answerable: true`.
+- [abstention_cases.json](truyen-kieu/abstention_cases.json) chứa 4 câu thiếu bằng chứng. Mỗi câu ghi từ khóa tra trên cả corpus và các trang liên quan đã đối chiếu. Dùng các câu này khi đánh giá hành vi từ chối.
+- Dev lấy `q01`–`q15` từ `benchmark/questions.json` của Day 6. `q09` thu hẹp về núi xa và trăng gần vì đoạn trích cũ nằm ở hai chunk. `q10` giữ đáp án và rút đoạn trích còn phần đủ để chứng minh trong một chunk. Các bộ lọc theo phạm vi câu thơ đến từ câu hỏi. Metadata Day 6 dùng khoảng câu thơ của trang, nên bộ lọc kiểm tra sự giao nhau của khoảng trang chứa chunk với phạm vi được hỏi.
+- Cả 7 câu test được soạn mới cho Day 7. Chỉ dùng test để đo kết quả sau khi chốt cấu hình trên dev. Đầu vào của agent và công cụ tìm kiếm chỉ gồm câu hỏi và bộ lọc nếu có. Đáp án chuẩn, evidence và nhãn được đọc ở bước chấm.
+
 ### Kiểm tra dense retrieval
 
 Lượt truy vấn pgvector trực tiếp ngày 16/11/2026 dùng cấu hình C cho câu `q01` “Người con trai trong gia đình viên ngoại họ Vương tên là gì?”. Trace chạy trên máy học viên nằm tại `starter/results/day6-dense-smoke.json`. Chunk `c0088eb0bf44d62bef7b394cbca8ba590eeb7db181bd1b3c6538d3bf60bbdef2` đứng đầu với điểm cosine 0,592797 và có câu “14. Vương Quan là chữ, nối dòng nho gia.” ở trang PDF 2. Cả ba kết quả khớp corpus đã xuất về ID, nguồn, trang, nội dung và metadata. Điểm cosine của mỗi kết quả bằng 1 trừ khoảng cách cosine.

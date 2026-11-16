@@ -1,0 +1,294 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "Người con trai trong gia đình viên ngoại họ Vương tên là gì?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 2,
+        "evidence": "13. Một trai con thứ rốt lòng,\n14. Vương Quan là chữ, nối dòng nho gia."
+      }
+    ],
+    "expected_answer": "Vương Quan."
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Trong phạm vi 1.000 dòng thơ đầu của bản trích xuất, tiết Thanh minh diễn ra vào tháng nào, gồm lễ và hội gì?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 3,
+        "evidence": "43. Thanh minh trong tiết tháng ba,\n44. Lễ là tảo mộ, hội là đạp Thanh."
+      }
+    ],
+    "expected_answer": "Tháng ba; lễ tảo mộ và hội đạp Thanh.",
+    "filter": {
+      "verse_start": {
+        "lte": 1000
+      },
+      "verse_end": {
+        "gte": 1
+      }
+    }
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "Theo lời Vương Quan kể khi gặp ngôi mộ, Đạm Tiên trước kia làm nghề gì?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 4,
+        "evidence": "61. Vương Quan mới dẫn gần xa:\n62. Đạm Tiên nàng ấy xưa là ca nhi."
+      }
+    ],
+    "expected_answer": "Đạm Tiên là ca nhi."
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "Chàng trai mang họ Kim, tên Trọng được giới thiệu có xuất thân như thế nào?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 9,
+        "evidence": "Nguyên người quanh quất đâu xa,\nHọ Kim tên Trọng vốn nhà trâm anh.\nNền phú hậu, bậc tài danh,"
+      }
+    ],
+    "expected_answer": "Xuất thân nhà trâm anh, nền phú hậu, bậc tài danh."
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "Trong giấc chiêm bao, Kiều viết bao nhiêu khúc ngâm sau khi nhận đề bài?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 12,
+        "evidence": "Kiều vâng lĩnh ý đề bài,\nTay tiên một vẫy đủ mười khúc ngâm."
+      }
+    ],
+    "expected_answer": "Mười khúc ngâm."
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Sau khi nhận lời thủy chung, những vật nào được trao tay làm tín vật?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 20,
+        "evidence": "Một lời vâng tạc đá vàng thủy chung!”\nĐược lời như cởi tấm lòng,\nGiở kim thoa với khăn hồng trao tay,"
+      }
+    ],
+    "expected_answer": "Kim thoa và khăn hồng."
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "Khi từ chối sự vội vàng trong tình yêu, Kiều nói nếu còn thân thì sau này có thể làm gì?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 30,
+        "evidence": "Vội chi liễu ép hoa nài,\nCòn thân ắt lại đền bồi có khi!"
+      }
+    ],
+    "expected_answer": "Có thể đền bồi về sau, không cần vội ép chuyện tình duyên."
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "Khi phải lựa chọn giữa tình và hiếu, Kiều quyết định làm gì để cứu cha?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 35,
+        "evidence": "Duyên hội ngộ, đức cù lao,\nBên tình bên hiếu, bên nào nặng hơn?\nĐể lời thệ hải minh sơn,\nLàm con trước phải đền ơn sinh thành.\n\n605.\nQuyết tình nàng mới hạ tình:\nDẽ cho để thiếp bán mình chuộc cha!"
+      }
+    ],
+    "expected_answer": "Đặt ơn sinh thành lên trước và bán mình chuộc cha."
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "Trong hai câu mở đầu đoạn lầu Ngưng Bích, cảnh núi và trăng được tả xa gần ra sao?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 60,
+        "evidence": "Trước lầu Ngưng bích khóa xuân,\nVẻ non xa, tấm trăng gần, ở chung."
+      }
+    ],
+    "expected_answer": "Núi ở xa, trăng ở gần."
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "Việc chuộc Kiều khỏi Tú bà được miêu tả bằng những bước trao đổi và thủ tục nào?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 80,
+        "evidence": "Rõ ràng của dẫn tay trao,\nHoàn lương một thiếp thân vào cửa công.\nCông tư đôi lẽ đều xong,"
+      }
+    ],
+    "expected_answer": "Trao của rõ ràng, hoàn lương vào cửa công; cả việc công và tư đều xong."
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "Trong phạm vi dòng thơ trích xuất 1.001–2.000, người nói “Giấu ta ta cũng liệu bài giấu cho” ví tình thế đối phương với hình ảnh nào?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 90,
+        "evidence": "Tính rằng cách mặt khuất lời,\nGiấu ta ta cũng liệu bài giấu cho!\nLo gì việc ấy mà lo,\nKiến trong miệng chén có bò đi đâu?"
+      }
+    ],
+    "expected_answer": "Kiến trong miệng chén, không thể bò đi đâu.",
+    "filter": {
+      "verse_start": {
+        "lte": 2000
+      },
+      "verse_end": {
+        "gte": 1001
+      }
+    }
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "Khi nhân vật vừa tỉnh lại và bị gọi lên hầu, tấm bài treo trong tòa nhà ghi những chữ gì?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 100,
+        "evidence": "Ngước trông tòa rộng dãy dài,\nThiên Quan Trủng Tể có bài treo trên."
+      }
+    ],
+    "expected_answer": "Thiên Quan Trủng Tể."
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "Tiểu thư giao cho ai việc tra hỏi thực tình khi thấy người hầu xót xa?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 110,
+        "evidence": "Tiểu thư hỏi lại Thúc Sinh:\n\n1890.\nCậy chàng tra lấy thực tình cho nao!"
+      }
+    ],
+    "expected_answer": "Thúc Sinh."
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "Điều gì ở đồ chuông khánh khiến Giác Duyên lo lường và hỏi lại lai lịch của nàng?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 120,
+        "evidence": "Giở đồ chuông khánh xem qua,\nKhen rằng: Khéo giống của nhà Hoạn nương!\nGiác Duyên thực ý lo lường,\nĐêm thanh mới hỏi lại nàng trước sau."
+      }
+    ],
+    "expected_answer": "Khách đàn việt nhận xét đồ chuông khánh giống của nhà Hoạn nương."
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "Trong phạm vi dòng thơ trích xuất 2.001–3.254, người sắp ra đi lấy lý do bốn bể không nhà để khuyên người ở lại thế nào, và hẹn chờ bao lâu?",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 130,
+        "evidence": "Bằng ngay bốn bể không nhà,\nTheo càng thêm bận, biết là đi đâu?\nĐành lòng chờ đó ít lâu,\nChầy chăng là một năm sau vội gì?"
+      }
+    ],
+    "expected_answer": "Theo đi sẽ thêm bận; hãy chờ ít lâu, chậm thì một năm.",
+    "filter": {
+      "verse_start": {
+        "lte": 3254
+      },
+      "verse_end": {
+        "gte": 2001
+      }
+    }
+  },
+  {
+    "id": "t01",
+    "split": "test",
+    "question": "Khi được xin đề thơ ở đoạn xem tranh, Kiều viết bao nhiêu câu?",
+    "expected_answer": "Bốn câu.",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 23,
+        "evidence": "Sinh rằng: “Phác họa vừa rồi,\nPhẩm đề xin một vài lời thêm hoa!”\nTay tiên gió táp mưa sa\nKhoảng trên dừng bút thảo và bốn câu."
+      }
+    ]
+  },
+  {
+    "id": "t02",
+    "split": "test",
+    "question": "Khi phóng hỏa nơi Kiều ở, nhóm bắt cóc dùng thứ gì lấy từ bên sông để đánh lạc hướng?",
+    "expected_answer": "Một thi thể vô chủ.",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 96,
+        "evidence": "Phòng đào viện sách bốn bề lửa dong.\nSẵn thây vô chủ bên sông,\n\n1650.\nđem vào để đó lộn sòng ai hay?"
+      }
+    ]
+  },
+  {
+    "id": "t03",
+    "split": "test",
+    "question": "Trong phạm vi dòng thơ 2.001–3.254, tấm biển ở nơi Kiều nhìn thấy khi trời vừa rạng sáng sau khi trốn đi ghi ba chữ gì?",
+    "expected_answer": "Chiêu ẩn am.",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 118,
+        "evidence": "Chùa đâu trông thấy nẻo xa,\nRành rành Chiêu ẩn am ba chữ bài."
+      }
+    ],
+    "filter": {
+      "verse_start": {
+        "lte": 3254
+      },
+      "verse_end": {
+        "gte": 2001
+      }
+    }
+  },
+  {
+    "id": "t04",
+    "split": "test",
+    "question": "Trước khi viết tuyệt bút trên thuyền, Kiều hỏi và được biết tên dòng sông là gì?",
+    "expected_answer": "Sông Tiền Đường.",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 153,
+        "evidence": "Hỏi ra mới biết rằng sông Tiền đường.\nNhớ lời thần mộng rõ ràng,\nNày thôi hết kiếp đoạn trường là đây!\nĐạm Tiên nàng nhé có hay!\nHẹn ta thì đợi dưới này rước ta.\n\n2625.\nDưới đèn sẵn bức tiên hoa,\nMột thiên tuyệt bút gọi là để sau."
+      }
+    ]
+  },
+  {
+    "id": "t05",
+    "split": "test",
+    "question": "Trong buổi đoàn viên, mẹ Kiều nói con gái đã lưu lạc bao nhiêu năm?",
+    "expected_answer": "Mười lăm năm.",
+    "gold": [
+      {
+        "source_id": "truyen-kieu-nguyen-du",
+        "page": 176,
+        "evidence": "Huyên già dưới gối gieo mình,\nKhóc than mình kể sự tình đầu đuôi:\nTừ con lưu lạc quê người,\n\n3020.\nBèo trôi sóng vỗ chốc mười lăm năm!"
+      }
+    ]
+  }
+]
