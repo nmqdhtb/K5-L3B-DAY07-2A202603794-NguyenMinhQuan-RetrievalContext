@@ -1,0 +1,122 @@
+{
+  "split": "test",
+  "retrieve_only": false,
+  "model": "gemini-3.8-flash",
+  "corpus_sha256": "b82d733575816c568ffc7994c012d66fa13137a41effe4bc2386fe0513316295",
+  "chunk_count": 379,
+  "test_cases_sha256": "ed428279e7abf284cd18ee845c98413f9bc745fc744ff49b40cc9456d241713e",
+  "embedding": {
+    "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "pooling": "recursive whitespace segments within token limit; token-count-weighted mean of L2-normalized segment vectors, then L2 normalize",
+    "query_document_processing": "identical; no prefix",
+    "max_sequence_tokens": 128,
+    "dimensions": 384,
+    "index_strategy": "C"
+  },
+  "setup_ms": 8367.00004094746,
+  "top_k": 3,
+  "candidate_k": 20,
+  "rrf_k": 60,
+  "max_searches": 4,
+  "configs": {
+    "tfidf": {
+      "strategy": "tfidf",
+      "context_budget_chars": 800,
+      "search_guidance": "",
+      "questions": 7,
+      "errors": [],
+      "ranking_errors": [],
+      "hit1": {
+        "n": 0,
+        "N": 5,
+        "rate": 0.0
+      },
+      "evidence_hit3": {
+        "n": 1,
+        "N": 5,
+        "rate": 0.2
+      },
+      "median_retrieval_ms": 6.901875021867454,
+      "context_evidence_rate": {
+        "n": 0,
+        "N": 5,
+        "rate": 0.0
+      },
+      "tool_use": {
+        "n": 7,
+        "N": 7,
+        "rate": 1.0
+      },
+      "search_counts": {
+        "4": 7
+      },
+      "search_limits": 7,
+      "searched_then_abstained": {
+        "n": 2,
+        "N": 2,
+        "rate": 1.0
+      },
+      "false_abstention": {
+        "n": 5,
+        "N": 5,
+        "rate": 1.0
+      },
+      "median_agent_ms": 11935.825625085272,
+      "agent_ms_total": 82038.13995909877,
+      "prompt_tokens": 25195,
+      "completion_tokens": 773,
+      "service_cost_usd": null
+    },
+    "hybrid_budget": {
+      "strategy": "hybrid",
+      "context_budget_chars": 1600,
+      "search_guidance": "",
+      "questions": 7,
+      "errors": [],
+      "ranking_errors": [],
+      "hit1": {
+        "n": 1,
+        "N": 5,
+        "rate": 0.2
+      },
+      "evidence_hit3": {
+        "n": 2,
+        "N": 5,
+        "rate": 0.4
+      },
+      "median_retrieval_ms": 84.00612499099225,
+      "context_evidence_rate": {
+        "n": 2,
+        "N": 5,
+        "rate": 0.4
+      },
+      "tool_use": {
+        "n": 7,
+        "N": 7,
+        "rate": 1.0
+      },
+      "search_counts": {
+        "1": 2,
+        "4": 5
+      },
+      "search_limits": 5,
+      "searched_then_abstained": {
+        "n": 2,
+        "N": 2,
+        "rate": 1.0
+      },
+      "false_abstention": {
+        "n": 3,
+        "N": 5,
+        "rate": 0.6
+      },
+      "median_agent_ms": 12391.020499984734,
+      "agent_ms_total": 75428.90999885276,
+      "prompt_tokens": 29824,
+      "completion_tokens": 1016,
+      "service_cost_usd": null
+    }
+  },
+  "selected_config_sha256": "c91a8809ea9d0abc3342d6bdccd32007a6fc1d631a426533806fc4078931d218"
+}

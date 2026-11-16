@@ -1,0 +1,79 @@
+{
+  "question": "Người con trai trong gia đình viên ngoại họ Vương tên là gì?",
+  "strategy": "C",
+  "filter": null,
+  "hits": [
+    {
+      "chunk_id": "c0088eb0bf44d62bef7b394cbca8ba590eeb7db181bd1b3c6538d3bf60bbdef2",
+      "document_id": "truyen-kieu-nguyen-du",
+      "source": "https://kholuu.wordpress.com/wp-content/uploads/2015/07/truyen_kieu_tron_bo.pdf",
+      "page": 2,
+      "text": "11. Có nhà viên ngoại họ Vương,\n12. Gia tư nghĩ cũng thường thường bực trung.\n13. Một trai con thứ rốt lòng,\n14. Vương Quan là chữ, nối dòng nho gia.\n15. Đầu lòng hai ả tố nga,\n16. Thúy Kiều là chị, em là Thúy Vân.\n17. Mai cốt cách, tuyết tinh thần,\n18. Một người một vẻ, mười phân vẹn mười.\n19. Vân xem trang trọng khác vời,\n20. Khuôn trăng đầy đặn, nét ngài nở nang.\n\n",
+      "metadata": {
+        "char_end": 523,
+        "chunking": {
+          "method": "paragraph",
+          "overlap": 0,
+          "max_size": 500
+        },
+        "verse_end": 28,
+        "char_start": 153,
+        "verse_start": 7,
+        "extraction_status": "ok",
+        "raw_character_count": 860,
+        "normalization_replacements": 14,
+        "normalized_character_count": 825
+      },
+      "distance": 0.40720304293650544,
+      "score": 0.5927969570634946
+    },
+    {
+      "chunk_id": "80f8620fe0b19eda4020b4086da534edfcbc4930bd312f504b97c79ea8cc1e5e",
+      "document_id": "truyen-kieu-nguyen-du",
+      "source": "https://kholuu.wordpress.com/wp-content/uploads/2015/07/truyen_kieu_tron_bo.pdf",
+      "page": 170,
+      "text": "Chưa từng được họ được tên,\nSự này hỏi Thúc sinh viên mới tường.\nNghe lời đô nói rõ ràng,\nTức thì đưa thiếp mời chàng Thúc sinh.\n\n2915.\nNỗi nàng hỏi hết phân minh,\nChồng con đâu tá tính danh là gì?\nThúc rằng: Gặp buổi loạn ly,\nTrong quân tôi hỏi thiếu gì tóc tơ.\nĐại vương tên Hải họ Từ,\n\n2920.\nĐánh quen trăm trận sức dư muôn ngườị\nGặp nàng khi ở châu Thai,\nLạ gì quốc sắc thiên tài phải duyên.\nVẫy vùng trong bấy nhiêu niên,\nLàm nên động địa kinh thiên đùng đùng.\n\n",
+      "metadata": {
+        "char_end": 467,
+        "chunking": {
+          "method": "paragraph",
+          "overlap": 0,
+          "max_size": 500
+        },
+        "verse_end": 2928,
+        "char_start": 0,
+        "verse_start": 2911,
+        "extraction_status": "ok",
+        "raw_character_count": 643,
+        "normalization_replacements": 9,
+        "normalized_character_count": 609
+      },
+      "distance": 0.45900995662897415,
+      "score": 0.5409900433710259
+    },
+    {
+      "chunk_id": "ea0fd12246cf01706a61591dfdd0a4c9cf6db3757097ae1d1cff3f642fa25d46",
+      "document_id": "truyen-kieu-nguyen-du",
+      "source": "https://kholuu.wordpress.com/wp-content/uploads/2015/07/truyen_kieu_tron_bo.pdf",
+      "page": 9,
+      "text": "Nguyên người quanh quất đâu xa,\nHọ Kim tên Trọng vốn nhà trâm anh.\nNền phú hậu, bậc tài danh,\n\n150.\nVăn chương nết đất, thông minh tính trời.\nPhong tư tài mạo tót vời,\nVào trong phong nhã, ra ngoài hào hoa.\nChung quanh vẫn đất nước nhà,\nVới Vương Quan trước vẫn là đồng thân.\n\n155.\nVẫn nghe thơm nức hương lân,\nMột nền đồng Tước khoá xuân hai Kiều.\nNước non cách mấy buồng thêu,\nNhững là trộm nhớ thầm yêu chốc mòng.\nMay thay giải cấu tương phùng,\n\n",
+      "metadata": {
+        "char_end": 449,
+        "chunking": {
+          "method": "paragraph",
+          "overlap": 0,
+          "max_size": 500
+        },
+        "verse_end": 164,
+        "char_start": 0,
+        "verse_start": 147,
+        "extraction_status": "ok",
+        "raw_character_count": 649,
+        "normalization_replacements": 12,
+        "normalized_character_count": 613
+      },
+      "distance": 0.4675680677633316,
+      "score": 0.5324319322366684
+    }
+  ]
+}

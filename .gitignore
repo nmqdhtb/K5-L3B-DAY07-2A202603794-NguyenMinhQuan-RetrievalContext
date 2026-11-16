@@ -8,5 +8,18 @@ __pycache__/
 
 # Local datasets and generated output; share permitted artifacts deliberately
 starter/data/
-starter/results/
+starter/results/*
+!starter/results/day6-dense-smoke.json
+!starter/results/step4/
+starter/results/step4/*
+!starter/results/step4/dev-20261116-115126/
+starter/results/step4/dev-20261116-115126/*
+!starter/results/step4/dev-20261116-115126/summary.json
+!starter/results/step4/dev-20261116-115126/*.jsonl
+!starter/results/step5/
+starter/results/step5/*
+!starter/results/step5/test-20261116-123311/
+starter/results/step5/test-20261116-123311/*
+!starter/results/step5/test-20261116-123311/summary.json
+!starter/results/step5/test-20261116-123311/*.jsonl
 .DS_Store

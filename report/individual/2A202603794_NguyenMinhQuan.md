@@ -75,4 +75,4 @@ Chi phí thực tế chưa được xác nhận. API không trả số tiền tr
 
 Hybrid đưa bằng chứng vào context ở 2/5 ca test có đáp án, giảm từ chối nhầm từ 5/5 xuống 3/5. Context Evidence Rate giảm từ 12/15 trên dev xuống 2/5 trên test. Ca `t04` cho thấy lý do cần đo context riêng với ranking. Ca `t06` và `t07` đều dừng do chạm giới hạn tìm kiếm ở cả hai cấu hình.
 
-Trace nằm tại `starter/results/step5/test-20261116-123311/`. [Lệnh chạy và cách chấm](../../docs/dev-benchmark.md#chạy-test-với-cấu-hình-đã-chốt)
+Không điều chỉnh cấu hình sau khi đọc kết quả test. [Tổng hợp test](../../starter/results/step5/test-20261116-123311/summary.json) · [Trace TF-IDF](../../starter/results/step5/test-20261116-123311/tfidf.jsonl) · [Trace Hybrid](../../starter/results/step5/test-20261116-123311/hybrid_budget.jsonl) · [Lệnh chạy và cách chấm](../../docs/dev-benchmark.md#chạy-test-với-cấu-hình-đã-chốt)
