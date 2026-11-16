@@ -7,3 +7,35 @@ Các file `example_*.json` chỉ minh họa định dạng, không đủ để n
 - **Câu thiếu evidence:** `id`, `split`, `question`, `answerable: false`, `expected_behavior: "search_and_abstain"`, `absence_reason`. Xem `agent_cases_example.json`.
 
 Không đưa `gold` hoặc nhãn đáp án vào model và retrieval tool. Ghi nguồn dữ liệu và quyền sử dụng. Cách chuyển một số định dạng Day 6: [starter/README.md](../starter/README.md).
+
+## Corpus Truyện Kiều
+
+[chunks.json](truyen-kieu/chunks.json) chứa 379 chunk trên 189 trang nội dung. Day 6 dùng cùng chunk và embedding cho B và C. Corpus này giữ nguyên ID, nguồn, trang, văn bản và metadata của Day 6. Nguồn là bản PDF *Truyện Kiều (trọn bộ)* của Nguyễn Du ghi trong `data/manifest.json` của Day 6. Manifest ghi nhận học viên đã xác nhận quyền chia sẻ bản PDF.
+
+Từ thư mục gốc Day 7, tái tạo bản xuất khi hai repo nằm cạnh nhau:
+
+```bash
+day6=../K5-L3B-DAY06-NguyenMinhQuan-2A202603794-DataIngestion
+python3 starter/convert_day6.py \
+  --chunks "$day6/starter/results/chunking/chunks_B.jsonl" \
+  --output data/truyen-kieu
+```
+
+SHA-256 đầu vào là `8d2d23c8adba2aba92af2c7e38e3b468e84f2c9fad09d9b6cf264accfcc4ddf3`, trùng với bản Day 6 đã chốt.
+
+### Kiểm tra dense retrieval
+
+Lượt truy vấn pgvector trực tiếp ngày 16/11/2026 dùng cấu hình C cho câu `q01` “Người con trai trong gia đình viên ngoại họ Vương tên là gì?”. Trace chạy trên máy học viên nằm tại `starter/results/day6-dense-smoke.json`. Chunk `c0088eb0bf44d62bef7b394cbca8ba590eeb7db181bd1b3c6538d3bf60bbdef2` đứng đầu với điểm cosine 0,592797 và có câu “14. Vương Quan là chữ, nối dòng nho gia.” ở trang PDF 2. Cả ba kết quả khớp corpus đã xuất về ID, nguồn, trang, nội dung và metadata. Điểm cosine của mỗi kết quả bằng 1 trừ khoảng cách cosine.
+
+Khi Docker Desktop đã chạy và Day 6 có môi trường Python cùng bộ nhớ đệm model theo `starter/README.md` của Day 6, chạy từ thư mục gốc Day 7:
+
+```bash
+docker compose -p day6_student_starter -f "$day6/starter/docker-compose.yml" up -d --wait
+mkdir -p starter/results
+DATABASE_URL=postgresql://day6:day6_local_only@127.0.0.1:55433/day6_lab \
+  "$day6/starter/.venv/bin/python" "$day6/starter/scripts/search_vectors.py" \
+  --strategy C --question "Người con trai trong gia đình viên ngoại họ Vương tên là gì?" \
+  > starter/results/day6-dense-smoke.json
+```
+
+Nếu chưa có môi trường Python hoặc model, làm theo mục cài đặt và chuẩn bị model trong README của Day 6. Nếu truy vấn trả về danh sách rỗng, chạy `ingest_vectors.py` theo hướng dẫn Day 6 để khôi phục dữ liệu.
